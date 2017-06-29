@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div>Welcome</div>
+<div class="container"ng-model="info" >
+    <h2>The Form</h2>
+    <div class="row ">
+        <div class="col-md-10" style="background-color:lightblue;">
+            <form name="myForm" id="infoForm">
+                <div class="form-group">
+                    <label for="formInput1">Name:</label>
+                    <input type="text" class="form-control"  id = "name" name="fname" placeholder="Enter Name"/>
+                </div>
+                <div class="form-group">
+                    <label for="formInput2">Phone:</label>
+                    <input type="text" class="form-control" id = "phone" name="fphone" placeholder="Enter Phone"/>
+                </div>
+                <div class="form-group">
+                    <label for="formInput3">Location:</label>
+                    <input type="text" class="form-control" id = "location" name="flocation" placeholder="Enter Location"/>
+                </div>
+                <div class="form-group">
+                    <label for="formInput4">Email:</label>
+                    <input type="text" class="form-control" id = "email" name="femail" placeholder="Enter Email">
+                </div>
+                <button type="button" onclick="validateForm()"/>submit</button>
+                <button type="button" onclick="update()">Update</button>
+
+            </form>
+
+        </div>
+    </div>
+    <div class="col-md-10" ng-model="classSelect">
+        <table class="table" id="myTable" style="background-color:lavenderblush;"/>
+        <h2>The Table</h2>
+        
+        <thead>
+        <tr ><th>Class Name</th><th>subject1</th><th>subject2</th><th>subject3</th><th>select</th></tr>
+        <tr>
+            <td>Language</td>       
+        </tr>
+        <tr>
+             <td>Music</td>
+        </tr>
+        <tr>
+            <td>Painting</td>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+        </table>
+
+    </div>

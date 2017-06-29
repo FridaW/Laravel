@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div class="Row"  ng-controller="messageCtrl">
+<form class="form-group">
+        <label>From</label>
+	<input class="form-control" ng-model='mgFrom'/>
+    
+	<label>To</label>
+	<input class="form-control" ng-model='mgTo'/>
+
+	<label>Title</label>
+	<input class="form-control" ng-model='mgTitle'/>
+
+	<label>Content</label>
+	<input class="form-control" ng-model='mgContent'/>
+
+	<button class='btn btn-primary' ng-click='sendMessage(this);'>Send Messages</button>
+</form>
+
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>#</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Content</th>
+      <th>View</th>
+      <th>Delete</th>
+      <th>Important</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat='message in messages'>
+      <th scope="row">1</th>
+                <td> {{message._id}} </td>
+		<td> {{message.From}} </td>
+		<td> {{message.To}} </td>
+		<td> {{message.Timestamp}} </td>
+		<td> {{message.Title}} </td>
+		<td> {{message.Content}} </td>
+		<td> <button ng-click='viewMessage(message);'>View</button> </td>
+		<td> <button ng-click='delMessage(message);'>Delete</button> </td>
+		<td> <button message>Important</button> </td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,19 @@
+<div id="log">LogIn</div>
+<div class="container" ng-controller="loginCtrl">
+    <div class="col-md-3" style="background-color:lavender;">
+       <form ng-submit="login_check()">
+           <div class="form-group" id="form_1">
+               <label>Name:</label><br/>
+               <input type="text" placeholder="Enter user name"  ng-model="username" required /><br/><br/>
+           </div>
+           <div class="form-group" id="form_2">
+               <label>Password:</label><br/>                     
+               <input type="password" placeholder="Enter password"  ng-model="password" required /><br/><br/>
+           </div>               
+           <input type="submit" value="Submit" ng-click ="login_check()" />
+          <input type="reset" value="Reset"/>
+    
+        </form>        
+    </div>   
+</div>
+        
